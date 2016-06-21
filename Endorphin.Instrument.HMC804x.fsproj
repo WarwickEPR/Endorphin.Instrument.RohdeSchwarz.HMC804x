@@ -57,6 +57,11 @@
     <None Include="Example.fsx" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Endorphin.Utilities\Endorphin.Utilities.fsproj">
+      <Name>Endorphin.Utilities</Name>
+      <Project>{6479441b-b48a-4433-8e74-2a087d01e558}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
