@@ -1,6 +1,6 @@
 ﻿// Copyright (c) University of Warwick. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 
-namespace Endorphin.Instrument.HMC804x
+namespace Endorphin.Instrument.RhodeSchwarz.HMC804x
 
 // Most of this file is taken almost directly from the Keysight, and should be factored out into a SCPI library
 
@@ -61,7 +61,7 @@ module internal IO =
 
         /// Loop through the error queue of the machine, creating a sequence of all the listed
         /// errors until the queue is empty.
-        let queryErrorQueue source = 
+        let queryErrorQueue source =
             let rec errorQueueLoop errorList = async {
                 let! nextError = queryNextErrorInQueue source
                 if nextError.Code <> 0 then return! errorQueueLoop (nextError :: errorList)
@@ -144,7 +144,7 @@ module internal IO =
 
     /// Write a key without a value to the machine.  Useful for "delete all" style functions.
     let writeKey key source = setValueString (fun _ -> "") key source None
- 
+
     /// Functions related to identifying the connected machine.
     module Identify =
         /// Attempt to parse a device ID string into an internal representation of a

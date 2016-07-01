@@ -1,12 +1,11 @@
 ﻿// Copyright (c) University of Warwick. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 
-namespace Endorphin.Instrument.HMC804x
+namespace Endorphin.Instrument.RhodeSchwarz.HMC804x
 
 /// Command set of the Keysight RF instrument.
 /// Implements functions to modify & query configuration.
 /// Organised by subsystem mirroring the Keysight configuration.
 module HMC804x =
-
     /// Open a current/voltage source given a VISA address and timeout in milliseconds.
     let openInstrument  = IO.Connect.openInstrument
 
@@ -113,7 +112,7 @@ module HMC804x =
                          Triggering  = Off
                          TriggerMode = Run }
           PowerLimit = None }
-        
+
     let rampTriggered startVoltage startCurrent finishVoltage finishCurrent riseTime fallTime =
         let start  = (Voltage_V startVoltage, Current_A startCurrent, Time_s riseTime,Interpolate)
         let finish = (Voltage_V finishVoltage, Current_A finishCurrent, Time_s fallTime,Interpolate)
@@ -125,4 +124,3 @@ module HMC804x =
 
     let withMaximumPower power settings =
         { settings with PowerLimit = Some <| MaximumPower (Power_W power) }
-        

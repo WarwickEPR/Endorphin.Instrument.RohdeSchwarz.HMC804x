@@ -1,6 +1,6 @@
 ﻿// Copyright (c) University of Warwick. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 
-namespace Endorphin.Instrument.HMC804x
+namespace Endorphin.Instrument.RhodeSchwarz.HMC804x
 
 open Endorphin.Core
 open Microsoft.FSharp.Data.UnitSystems.SI.UnitSymbols
