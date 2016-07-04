@@ -25,7 +25,7 @@ let tags = "fsharp science"
 let solutionFile  = "Endorphin.Instrument.RhodeSchwarz.HMC804x.sln"
 let gitOwner = "WarwickEPR"
 let gitHome = "https://github.com/" + gitOwner
-let gitName = "Endorphin.Instrument.PicoTech"
+let gitName = "Endorphin.Instrument.RhodeSchwarz.HMC804x"
 
 // The url for the raw files hosted
 let gitRaw = environVarOrDefault "gitRaw" "https://raw.github.com/WarwickEPR"
