@@ -13,13 +13,13 @@ open Microsoft.FSharp.Data.UnitSystems.SI.UnitSymbols
 module internal IO =
     /// Query a key with a specific value, and parse the response into the internal representation.
     let queryKeyByValueString parseFunc key (HMC804x source) value = async {
-        let! response = sprintf "%s? %s\n" key value |> Visa.String.queryAsync source
+        let! response = sprintf "%s? %s\n" key value |> Visa.String.query source
         return parseFunc response }
 
     /// Query a source for the value of a particular key, and parse the response into
     /// the internal representation.
     let queryKeyString parseFunc key (HMC804x source) = async {
-        let! response = sprintf "%s?\n" key |> Visa.String.queryAsync source
+        let! response = sprintf "%s?\n" key |> Visa.String.query source
         return parseFunc response }
 
     /// Query a source for the value of a particular key, then try to parse the response
@@ -29,11 +29,11 @@ module internal IO =
         return tryParseFunc response }
 
     let queryKeyByValueBytes parseFunc key (HMC804x source) value = async {
-        let! response = sprintf "%s? %s\n" key value |> Visa.Bytes.queryAsync source
+        let! response = sprintf "%s? %s\n" key value |> Visa.Bytes.query source
         return parseFunc response }
 
     let queryKeyBytes parseFunc key (HMC804x source) value = async {
-        let! response = sprintf "%s?\n" key |> Visa.Bytes.queryAsync source
+        let! response = sprintf "%s?\n" key |> Visa.Bytes.query source
         return parseFunc response }
 
     [<AutoOpen>]
@@ -124,7 +124,7 @@ module internal IO =
     /// Set a quantity on the machine to a certain value by converting an internal
     /// representation to a machine representation, using the given valueMap.
     let setValueString valueMap key source value =
-        setValue createCommandString Visa.String.writeAsync valueMap key source value
+        setValue createCommandString Visa.String.write valueMap key source value
 
     /// Set a quantity on the machine to a certain value by covnerting an internal
     /// representation to a machine representation, using the given valueMap.  This request
@@ -132,15 +132,15 @@ module internal IO =
     /// and manipulate these values, but there is no risk of errant data causing problems
     /// when encoded to UTF-8.
     let setValueBytes valueMap key source value =
-        setValue createCommandBytes Visa.Bytes.writeAsync valueMap key source value
+        setValue createCommandBytes Visa.Bytes.write valueMap key source value
 
     /// Write a sequence of commands as one single command in string format.
     let setValueStringSequence commands source =
-        setValueSequence createCommandString concatenateCommandStrings Visa.String.writeAsync commands source
+        setValueSequence createCommandString concatenateCommandStrings Visa.String.write commands source
 
     /// Write a sequence of commands as one single command in bytes format.
     let setValueBytesSequence commands source =
-        setValueSequence createCommandBytes concatenateCommandBytes Visa.Bytes.writeAsync commands source
+        setValueSequence createCommandBytes concatenateCommandBytes Visa.Bytes.write commands source
 
     /// Write a key without a value to the machine.  Useful for "delete all" style functions.
     let writeKey key source = setValueString (fun _ -> "") key source None
