@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>HMC804x - Endorphin.Instrument.RohdeSchwarz.HMC804x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="University of Warwick EPR and Diamond group"/>
+
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
+
+    <link type="text/css" rel="stylesheet" href="/Endorphin.Instrument.RohdeSchwarz.HMC804x/content/style.css" />
+    <script type="text/javascript" src="/Endorphin.Instrument.RohdeSchwarz.HMC804x/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x">github page</a></li>
+        </ul>
+        <h3 class="muted"><a href="/Endorphin.Instrument.RohdeSchwarz.HMC804x/index.html">Endorphin.Instrument.RohdeSchwarz.HMC804x</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>HMC804x</h1>
+<p>
+  <span>Namespace: Endorphin.Instrument.RohdeSchwarz.HMC804x</span><br />
+</p>
+<div class="xmldoc">
+<p>Command set of the Keysight RF instrument.
+Implements functions to modify &amp; query configuration.
+Organised by subsystem mirroring the Keysight configuration.</p>
+
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
+            applyOutputSettings inst settings
+          </code>
+          <div class="tip" id="1">
+            <strong>Signature:</strong> inst:IVSource -&gt; settings:Settings -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L82-82" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+            applySettings inst powerSupplySettings
+          </code>
+          <div class="tip" id="2">
+            <strong>Signature:</strong> inst:IVSource -&gt; powerSupplySettings:seq&lt;KeyValuePair&lt;Output,Settings&gt;&gt; -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L94-94" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Apply a set of settings to the given current/voltage source</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+            availableOutputs _arg1
+          </code>
+          <div class="tip" id="3">
+            <strong>Signature:</strong> _arg1:ModelNumber -&gt; Set&lt;Output&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L25-25" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Selectable outputs of device</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
+            closeInstrument 
+          </code>
+          <div class="tip" id="4">
+            <strong>Signature:</strong> IVSource -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L42-42" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Close a source instrument.</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+            constantOutput voltage current
+          </code>
+          <div class="tip" id="5">
+            <strong>Signature:</strong> voltage:float&lt;MeasureProduct&lt;V,MeasureOne&gt;&gt; -&gt; current:float&lt;MeasureProduct&lt;A,MeasureOne&gt;&gt; -&gt; Settings<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L103-103" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+            local 
+          </code>
+          <div class="tip" id="6">
+            <strong>Signature:</strong> IVSource -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L21-21" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Mark the instrument as under local operation</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+            openInstrument 
+          </code>
+          <div class="tip" id="7">
+            <strong>Signature:</strong> string -&gt; int&lt;MeasureProduct&lt;ms,MeasureOne&gt;&gt; -&gt; Async&lt;IVSource&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L10-10" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Open a current/voltage source given a VISA address and timeout in milliseconds.</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+            queryIdentity 
+          </code>
+          <div class="tip" id="8">
+            <strong>Signature:</strong> IVSource -&gt; Async&lt;DeviceId&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L51-51" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Query the identity of a source, and match the returned string against ones known
+to the program.</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            rampContinuous (...)
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong> startVoltage:float&lt;MeasureProduct&lt;V,MeasureOne&gt;&gt; -&gt; startCurrent:float&lt;MeasureProduct&lt;A,MeasureOne&gt;&gt; -&gt; finishVoltage:float&lt;MeasureProduct&lt;V,MeasureOne&gt;&gt; -&gt; finishCurrent:float&lt;MeasureProduct&lt;A,MeasureOne&gt;&gt; -&gt; riseTime:float&lt;MeasureProduct&lt;s,MeasureOne&gt;&gt; -&gt; fallTime:float&lt;MeasureProduct&lt;s,MeasureOne&gt;&gt; -&gt; Settings<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L107-107" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            rampTriggered (...)
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong> startVoltage:float&lt;MeasureProduct&lt;V,MeasureOne&gt;&gt; -&gt; startCurrent:float&lt;MeasureProduct&lt;A,MeasureOne&gt;&gt; -&gt; finishVoltage:float&lt;MeasureProduct&lt;V,MeasureOne&gt;&gt; -&gt; finishCurrent:float&lt;MeasureProduct&lt;A,MeasureOne&gt;&gt; -&gt; riseTime:float&lt;MeasureProduct&lt;s,MeasureOne&gt;&gt; -&gt; fallTime:float&lt;MeasureProduct&lt;s,MeasureOne&gt;&gt; -&gt; Settings<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L116-116" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+            releaseInstrument inst
+          </code>
+          <div class="tip" id="11">
+            <strong>Signature:</strong> inst:IVSource -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L45-45" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Set the instrument to local and close</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
+            remote 
+          </code>
+          <div class="tip" id="12">
+            <strong>Signature:</strong> IVSource -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L17-17" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Mark the instrument as under remote operation</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+            reset 
+          </code>
+          <div class="tip" id="13">
+            <strong>Signature:</strong> IVSource -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L13-13" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Reset the instrument</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+            selectOutput 
+          </code>
+          <div class="tip" id="14">
+            <strong>Signature:</strong> IVSource -&gt; Output -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L31-31" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Select an output channel to apply subsequent configuration to</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
+            setArb 
+          </code>
+          <div class="tip" id="15">
+            <strong>Signature:</strong> IVSource -&gt; OnOffState -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L79-79" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '16', 16)" onmouseover="showTip(event, '16', 16)">
+            setArbData 
+          </code>
+          <div class="tip" id="16">
+            <strong>Signature:</strong> IVSource -&gt; ArbSequence -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L67-67" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
+            setArbRepetitions 
+          </code>
+          <div class="tip" id="17">
+            <strong>Signature:</strong> IVSource -&gt; ArbRepetitions -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L73-73" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
+            setArbTriggering 
+          </code>
+          <div class="tip" id="18">
+            <strong>Signature:</strong> IVSource -&gt; OnOffState -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L70-70" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
+            setArbTriggerMode 
+          </code>
+          <div class="tip" id="19">
+            <strong>Signature:</strong> IVSource -&gt; ArbTriggerMode -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L76-76" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+            setChannelOutput 
+          </code>
+          <div class="tip" id="20">
+            <strong>Signature:</strong> IVSource -&gt; OnOffState -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L60-60" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Enable/Disable the currently selected channel</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
+            setCurrent 
+          </code>
+          <div class="tip" id="21">
+            <strong>Signature:</strong> IVSource -&gt; Current -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L53-53" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
+            setMasterOutput 
+          </code>
+          <div class="tip" id="22">
+            <strong>Signature:</strong> IVSource -&gt; OnOffState -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L64-64" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Enable/Disable all enabled channels</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '23', 23)" onmouseover="showTip(event, '23', 23)">
+            setVoltage 
+          </code>
+          <div class="tip" id="23">
+            <strong>Signature:</strong> IVSource -&gt; Voltage -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L56-56" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '24', 24)" onmouseover="showTip(event, '24', 24)">
+            start inst
+          </code>
+          <div class="tip" id="24">
+            <strong>Signature:</strong> inst:IVSource -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L101-101" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
+            takeInstrument resource time
+          </code>
+          <div class="tip" id="25">
+            <strong>Signature:</strong> resource:string -&gt; time:int&lt;MeasureProduct&lt;ms,MeasureOne&gt;&gt; -&gt; Async&lt;IVSource&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L35-35" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Open a current/voltage source, reset it's state and set it as remote operated</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+            withMaximumPower power settings
+          </code>
+          <div class="tip" id="26">
+            <strong>Signature:</strong> power:float&lt;MeasureProduct&lt;W,MeasureOne&gt;&gt; -&gt; settings:Settings -&gt; Settings<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x/tree/master/src/Endorphin.Instrument.RohdeSchwarz.HMC804x/HMC804x.fs#L125-125" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <img src="/Endorphin.Instrument.RohdeSchwarz.HMC804x/img/logo.png" alt="F# Project" style="width:150px;margin:10px" />  
+          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+            <li class="nav-header">Endorphin.Instrument.RohdeSchwarz.HMC804x</li>
+            <li><a href="/Endorphin.Instrument.RohdeSchwarz.HMC804x/index.html">Home page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://nuget.org/packages/Endorphin.Instrument.RohdeSchwarz.HMC804x">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x">Source Code on GitHub</a></li>
+            <li><a href="/Endorphin.Instrument.RohdeSchwarz.HMC804x/license.html">License</a></li>
+            <li><a href="/Endorphin.Instrument.RohdeSchwarz.HMC804x/release-notes.html">Release Notes</a></li>
+            
+            <li class="nav-header">Getting started</li>
+            <li><a href="/Endorphin.Instrument.RohdeSchwarz.HMC804x/tutorial.html">Sample tutorial</a></li>
+
+            <li class="nav-header">Documentation</li>
+            <li><a href="/Endorphin.Instrument.RohdeSchwarz.HMC804x/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"/></a>
+  </body>
+  </html>
