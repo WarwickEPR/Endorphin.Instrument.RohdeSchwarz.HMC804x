@@ -5,10 +5,10 @@
 #r "Endorphin.Core/lib/net452/Endorphin.Core.dll"
 #r "Endorphin.Core.NationalInstruments/lib/net452/Endorphin.Core.NationalInstruments.dll"
 #r "log4net/lib/net45-full/log4net.dll"
-#r "bin/Release/Endorphin.Instrument.RhodeSchwarz.HMC804x.dll"
+#r "bin/Release/Endorphin.Instrument.RohdeSchwarz.HMC804x.dll"
 
 open Microsoft.FSharp.Data.UnitSystems.SI.UnitSymbols
-open Endorphin.Instrument.RhodeSchwarz.HMC804x
+open Endorphin.Instrument.RohdeSchwarz.HMC804x
 open HMC804x
 
 log4net.Config.BasicConfigurator.Configure ()

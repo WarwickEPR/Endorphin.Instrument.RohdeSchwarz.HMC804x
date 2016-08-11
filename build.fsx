@@ -16,16 +16,16 @@ open System.IO
 open SourceLink
 #endif
 
-let project = "Endorphin.Instrument.RhodeSchwarz.HMC804x"
-let summary = "F# wrapper for the RhodeSchwarz HMC804x series voltage source."
-let description = "F# wrapper for the RhodeSchwarz HMC804x series voltage source."
+let project = "Endorphin.Instrument.RohdeSchwarz.HMC804x"
+let summary = "F# wrapper for the RohdeSchwarz HMC804x series voltage source."
+let description = "F# wrapper for the RohdeSchwarz HMC804x series voltage source."
 let authors = [ "University of Warwick EPR and Diamond group" ]
 let licenseHeader = "Copyright (c) University of Warwick. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information."
 let tags = "fsharp science"
-let solutionFile  = "Endorphin.Instrument.RhodeSchwarz.HMC804x.sln"
+let solutionFile  = "Endorphin.Instrument.RohdeSchwarz.HMC804x.sln"
 let gitOwner = "WarwickEPR"
 let gitHome = "https://github.com/" + gitOwner
-let gitName = "Endorphin.Instrument.RhodeSchwarz.HMC804x"
+let gitName = "Endorphin.Instrument.RohdeSchwarz.HMC804x"
 
 // The url for the raw files hosted
 let gitRaw = environVarOrDefault "gitRaw" "https://raw.github.com/WarwickEPR"

@@ -11,17 +11,17 @@
 // (This is the original behaviour of ProjectScaffold prior to multi project support)
 let referenceBinaries = []
 // Web site location for the generated documentation
-let website = "/Endorphin.Instrument.RhodeSchwarz.HMC804x"
+let website = "/Endorphin.Instrument.RohdeSchwarz.HMC804x"
 
-let githubLink = "http://github.com/WarwickEPR/Endorphin.Instrument.RhodeSchwarz.HMC804x"
+let githubLink = "http://github.com/WarwickEPR/Endorphin.Instrument.RohdeSchwarz.HMC804x"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "Endorphin.Instrument.RhodeSchwarz.HMC804x"
+  [ "project-name", "Endorphin.Instrument.RohdeSchwarz.HMC804x"
     "project-author", "University of Warwick EPR and Diamond group"
-    "project-summary", "F# wrappers for the RhodeSchwarz.HMC804x voltage source."
+    "project-summary", "F# wrappers for the RohdeSchwarz.HMC804x voltage source."
     "project-github", githubLink
-    "project-nuget", "http://nuget.org/packages/Endorphin.Instrument.RhodeSchwarz.HMC804x" ]
+    "project-nuget", "http://nuget.org/packages/Endorphin.Instrument.RohdeSchwarz.HMC804x" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{DC63FD57-8
 		docs\content\tutorial.fsx = docs\content\tutorial.fsx
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Endorphin.Instrument.HMC804x", "src\Endorphin.Instrument.RhodeSchwarz.HMC804x\Endorphin.Instrument.HMC804x.fsproj", "{A22A101A-B419-4839-BF08-5453978DE6EE}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Endorphin.Instrument.RohdeSchwarz.HMC804x", "src\Endorphin.Instrument.RohdeSchwarz.HMC804x\Endorphin.Instrument.RohdeSchwarz.HMC804x.fsproj", "{A22A101A-B419-4839-BF08-5453978DE6EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,10 +1,10 @@
-# Endorphin.Instrument.RhodeSchwarz.HMC804x
+# Endorphin.Instrument.RohdeSchwarz.HMC804x
 
-F# wrapper built on [Endorphin.Core][1] for controlling the Rhode and Schwarz
+F# wrapper built on [Endorphin.Core][1] for controlling the Rohde and Schwarz
 HMC804x series voltage source.
 
 Documentation:
-http://WarwickEPR.github.io/Endorphin.Instrument.RhodeSchwarz.HMC804x  
+http://WarwickEPR.github.io/Endorphin.Instrument.RohdeSchwarz.HMC804x  
 More documentation to follow...
 
 ## Maintainers

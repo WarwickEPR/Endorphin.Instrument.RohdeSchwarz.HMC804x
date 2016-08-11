@@ -7,12 +7,12 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a22a101a-b419-4839-bf08-5453978de6ee</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Endorphin.Instrument.RhodeSchwarz.HMC804x</RootNamespace>
-    <AssemblyName>Endorphin.Instrument.RhodeSchwarz.HMC804x</AssemblyName>
+    <RootNamespace>Endorphin.Instrument.RohdeSchwarz.HMC804x</RootNamespace>
+    <AssemblyName>Endorphin.Instrument.RohdeSchwarz.HMC804x</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Name>Endorphin.Instrument.RhodeSchwarz.HMC804x</Name>
+    <Name>Endorphin.Instrument.RohdeSchwarz.HMC804x</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +22,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\Endorphin.Instrument.RhodeSchwarz.HMC804x.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Endorphin.Instrument.RohdeSchwarz.HMC804x.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +31,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\Endorphin.Instrument.RhodeSchwarz.HMC804x.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Endorphin.Instrument.RohdeSchwarz.HMC804x.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
