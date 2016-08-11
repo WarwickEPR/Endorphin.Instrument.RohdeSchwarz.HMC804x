@@ -5,47 +5,81 @@ namespace Endorphin.Instrument.RohdeSchwarz.HMC804x
 open Endorphin.Core
 open Microsoft.FSharp.Data.UnitSystems.SI.UnitSymbols
 
-exception InstrumentErrorException of string seq
 exception UnexpectedReplyException of string
 
 [<AutoOpen>]
 module Model =
+    type Model = HMC8041 | HMC8042 | HMC8043
 
-    [<AutoOpen>]
-    module Instrument =
-        /// An opened and connected RF source, which can have commands written to it.
-        type IVSource = internal HMC804x of Visa.Instrument
+    type Output = OUT1 | OUT2 | OUT3 with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = this |> function
+                | OUT1 -> "OUT1"
+                | OUT2 -> "OUT2"
+                | OUT3 -> "OUT3"
 
-        /// A record of the identification information a device provides.
-        type DeviceId = {
-            Manufacturer : string
-            ModelNumber : string
-            SerialNumber : string
-            Version : string }
+    type Voltage = Voltage_V of float<V> with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = match this with Voltage_V that -> that |> sprintf "%e"
 
-        /// Model numbers that are recognised by the program.
-        type ModelNumber = HMC8041 | HMC8042 | HMC8043
-        type Output = OUT1 | OUT2 | OUT3
+    type Current = Current_A of float<A> with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = match this with Current_A that -> that |> sprintf "%e"
 
-        /// A returned error, including its code and the associated message.
-        type Error = { Code : int ; Message : string }
+    type Power   = Power_W   of float<W> with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = match this with Power_W that -> that |> sprintf "%e"
 
-    type Voltage = Voltage_V of float<V>
-    type Current = Current_A of float<A>
-    type Power   = Power_W   of float<W>
-    type Time    = Time_s    of float<s>
+    type Time    = Time_s    of float<s> with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = match this with Time_s that -> that |> sprintf "%e"
 
     /// A toggle state, where something can either be On or Off.
-    type OnOffState = On | Off
+    type OnOffState = On | Off with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = this |> function
+                | On  -> "ON"
+                | Off -> "OFF"
 
-    type Interpolation = Interpolate | Step
+    type Interpolation = Interpolate | Step with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = this |> function
+                | Interpolate -> "1"
+                | Step -> "0"
 
-    type ArbPoint = Voltage * Current * Time * Interpolation
-    type ArbSequence = ArbPoint seq
+    type ArbPoint = {
+        Voltage : Voltage
+        Current : Current
+        Time    : Time
+        Interpolation : Interpolation } with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () =
+                [ SCPI.format this.Voltage
+                  SCPI.format this.Current
+                  SCPI.format this.Time
+                  SCPI.format this.Interpolation ]
+                |> String.concat ","
+
+    type ArbSequence = ArbSequence of ArbPoint seq with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () =
+                match this with ArbSequence that -> that
+                |> Seq.map SCPI.format
+                |> String.concat ","
+
     type ArbRepetitions =
     | Repetitions of uint16 // Up to 255
-    | Forever
-    type ArbTriggerMode = Single | Run
+    | Forever with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = this |> function
+                | Repetitions n -> string n
+                | Forever       -> "0"
+
+    type ArbTriggerMode = Single | Run with
+        interface SCPI.IScpiFormatable with
+            member this.ToScpiString () = this |> function
+                | Single -> "SING"
+                | Run    -> "RUN"
 
     type ArbSettings = {
         Sequence    : ArbSequence

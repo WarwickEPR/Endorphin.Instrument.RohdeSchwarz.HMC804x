@@ -1,3 +1,6 @@
+#### 0.2.0 - 2016-08-11
+* Move to Endorphin.Core.SCPI-based IO
+
 #### 0.1.2 - 2016-08-11
 * Spell the name correctly!
 

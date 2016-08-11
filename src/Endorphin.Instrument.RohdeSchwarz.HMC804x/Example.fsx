@@ -5,10 +5,11 @@
 #r "Endorphin.Core/lib/net452/Endorphin.Core.dll"
 #r "Endorphin.Core.NationalInstruments/lib/net452/Endorphin.Core.NationalInstruments.dll"
 #r "log4net/lib/net45-full/log4net.dll"
-#r "bin/Release/Endorphin.Instrument.RohdeSchwarz.HMC804x.dll"
+#r "bin/Debug/Endorphin.Instrument.RohdeSchwarz.HMC804x.dll"
 
 open Microsoft.FSharp.Data.UnitSystems.SI.UnitSymbols
 open Endorphin.Instrument.RohdeSchwarz.HMC804x
+open Endorphin.Core
 open HMC804x
 
 log4net.Config.BasicConfigurator.Configure ()
@@ -22,12 +23,12 @@ let settings : PowerSupplySettings = [ (OUT1, constantOutput 5.0<V> 0.2<A> )
 try
     async {
         // open the Rohde & Schwartz current source - set the VISA access string you need here and timeout
-        let! source = HMC804x.takeInstrument "TCPIP0::10.0.0.2::5025::SOCKET" 5000<ms>
-        do! applySettings source settings
+        let! source = IO.connect "TCPIP0::10.0.0.2::5025::SOCKET" 5000<ms>
+        do! applySettings settings source
         do! start source
         do! Async.Sleep 5000
         // tidy up and close
-        do! HMC804x.releaseInstrument source }
+        do! IO.disconnect source }
     |> Async.RunSynchronously
 with
-    | :? InstrumentErrorException as exn -> printfn "Failed with instrument errors: %A" exn.Data0
+    | :? SCPI.InstrumentErrorException as exn -> printfn "Failed with instrument errors: %A" exn.Data0
