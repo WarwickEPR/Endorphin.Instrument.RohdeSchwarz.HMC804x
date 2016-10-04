@@ -5,7 +5,8 @@ namespace Endorphin.Instrument.RohdeSchwarz.HMC804x
 /// Command set of the Keysight RF instrument.
 /// Implements functions to modify & query configuration.
 /// Organised by subsystem mirroring the Keysight configuration.
-module HMC804x =
+[<AutoOpen>]
+module Instrument =
     /// Selectable outputs of device
     let availableOutputs = function
         | HMC8041 -> [ OUT1 ] |> Set.ofList
@@ -100,3 +101,9 @@ module HMC804x =
     /// Change the maximum allowed power in a record of settings.
     let withMaximumPower power settings =
         { settings with PowerLimit = Some <| MaximumPower (Power_W power) }
+
+    /// Connect to instrument via TCPIP
+    let openInstrument = IO.connect
+
+    /// Disconnect from instrument
+    let closeInstrument = IO.disconnect

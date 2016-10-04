@@ -10,7 +10,6 @@
 open Microsoft.FSharp.Data.UnitSystems.SI.UnitSymbols
 open Endorphin.Instrument.RohdeSchwarz.HMC804x
 open Endorphin.Core
-open HMC804x
 
 log4net.Config.BasicConfigurator.Configure ()
 
