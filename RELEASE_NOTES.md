@@ -1,3 +1,6 @@
+#### 0.2.2 - 2016-11-01
+* Make essential types available to users
+
 #### 0.2.1 - 2016-10-04
 * Add instrument type wrapper to SCPI handle
 

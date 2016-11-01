@@ -57,7 +57,7 @@
     <Compile Include="Model.fs" />
     <Compile Include="Parse.fs" />
     <Compile Include="IO.fs" />
-    <Compile Include="Instrument.fs" />
+    <Compile Include="HMC804x.fs" />
     <None Include="Example.fsx" />
   </ItemGroup>
   <ItemGroup>

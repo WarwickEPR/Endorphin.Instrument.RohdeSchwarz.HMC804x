@@ -5,7 +5,7 @@ namespace Endorphin.Instrument.RohdeSchwarz.HMC804x
 open Endorphin.Core
 open Microsoft.FSharp.Data.UnitSystems.SI.UnitSymbols
 
-type HMC804x = internal HMC804x of SCPI.IScpiInstrument
+type CurrentSource = internal HMC804x of SCPI.IScpiInstrument
 exception UnexpectedReplyException of string
 
 [<AutoOpen>]

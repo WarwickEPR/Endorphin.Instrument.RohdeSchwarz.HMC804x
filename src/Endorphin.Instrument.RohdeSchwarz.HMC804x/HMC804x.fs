@@ -5,8 +5,7 @@ namespace Endorphin.Instrument.RohdeSchwarz.HMC804x
 /// Command set of the Keysight RF instrument.
 /// Implements functions to modify & query configuration.
 /// Organised by subsystem mirroring the Keysight configuration.
-[<AutoOpen>]
-module Instrument =
+module HMC804x =
     /// Selectable outputs of device
     let availableOutputs = function
         | HMC8041 -> [ OUT1 ] |> Set.ofList
