@@ -5,7 +5,7 @@ HMC804x series voltage source.
 
 Documentation:
 http://WarwickEPR.github.io/Endorphin.Instrument.RohdeSchwarz.HMC804x  
-More documentation to follow...
+
 
 ## Maintainers
 
